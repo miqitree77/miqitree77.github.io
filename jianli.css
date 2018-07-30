@@ -1,0 +1,139 @@
+/*header*/
+header .h-ul{
+    height: 40px;
+    width: 100%;
+    background-color: #22313F;
+    margin: 0;
+}
+header .h-ul li{
+    display: inline-block;
+    width: 90px;
+    height: 100%;
+    line-height: 40px;
+    margin-left: 10px;
+}
+header .h-ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+header .h-ul .dropdown .btn-li-a{
+    width: 160px;
+}
+header .h-ul .dropdown .btn-li-a li{
+    width: 100%;
+    margin: 0;
+}
+
+header .h-ul .dropdown .btn-li-a li a:hover{
+    background-color: #fff;
+}
+header .h-ul .dropdown .btn-li-a li a{
+    color: #000;
+    width: 100%;
+    height: 100%;
+}
+header .h-ul .dropdown .btn-li-a li a:hover{
+    background-color: #fff;
+}
+header .h-ul .dropdown .btn-li-a li a i{
+    margin-left: 70px;
+    -webkit-transition-duration: .7s;
+    opacity: 0;
+}
+header .h-ul .dropdown .btn-li-a li:nth-child(1) a i{
+    margin-left: 89px;
+}
+header .h-ul .dropdown .btn-li-a li a:hover i{
+    opacity: 1;
+}
+header .h-ul li:nth-child(3) {
+    width: 38px;
+    height: 38px;
+    float: right;
+    margin-right: 40px;
+    background: url('jianli-img/gitHub.png') no-repeat center center;
+}
+header .h-ul li:nth-child(3) a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+header .h-ul li:nth-child(4){
+    float: right;
+    width: 38px;
+    height: 38px;
+    margin-right: 10px;
+    background: url(jianli-img/QQ.png) no-repeat center center;
+}
+header .h-ul li:nth-child(4) a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+header .h-ul li:nth-child(5){
+    width: 38px;
+    height: 38px;
+    float: right;
+    margin-right: 10px;
+    background: url(jianli-img/weixin.png) no-repeat center center;
+}
+header .h-ul li:nth-child(5) a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+header .h-ul #weixin{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 150px;
+    top: 45px;
+    opacity: 0;
+    z-index: 2000;
+}
+header .h-ul #weixin img{
+    width: 100%;
+    height: 100%;
+}
+header .h-ul li:nth-child(5):hover + #weixin{
+    opacity: 1;
+    transition-duration: .8s;
+}
+
+/*section*/
+section{
+    opacity: 0;
+    transition-duration: .8s;
+    width: 990px;
+    z-index: 9999;
+    overflow: hidden;
+    position: fixed;
+    left: 50%;
+    top: 40px;
+    margin-left: -495px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+section .rgba{
+    filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: -1;
+}
+
+
+/*日期*/
+    #t-date{
+        width: 230px;
+        height: 40px;
+        line-height: 40px;
+        color: #272727;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        margin-left: 50%;
+        margin-right: 50%;
+        left: -115px;
+    }

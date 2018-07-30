@@ -1,0 +1,1278 @@
+<!doctype html><!--申明文档类型-->
+<html>
+	<head><!--中文编码: gbk gb2312-->
+		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+		<meta name="Author" content="凌薇老师" />
+		<meta name="Keywords" content="关键字,关键词" />
+		<meta name="Description" content="描述" />
+		<title>div</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{font-size:12px;color:#666;}
+			a{
+				list-style:none;
+				text-decoration:none;
+				color:#666;
+			}
+			.clear:after{
+				content:"";
+				display:block;
+				clear:both;
+			}
+			li{list-style:none;}
+			.fl{float:left;}
+			.fr{float:right;}
+			.main{
+				margin:0 auto;
+				width:990px;
+			}
+			#header{
+				background:#eee;
+				height:30px;
+			}
+			#header .h_box{height:30px;}
+			#header .h_box .h_boxl{
+				width:350px;
+				height:30px;
+				font-size:0;
+				display:inline-block;
+			}
+			#header .h_box .h_boxl p{
+				display:inline-block;
+				font-size:12px;
+				line-height:30px;
+				padding-right:5px;
+				margin-right:5px;
+			}
+			#header .h_box .h_boxl p a:hover{text-decoration:underline;}
+			#header .h_box .h_boxl p span{
+				font-weight:bold;
+				font-size:16px;
+			}
+			#header .h_box .h_boxr{
+				width:630px;
+				height:30px;
+				line-height:30px;
+				font-size:0;
+			}
+			#header .h_box .h_boxr .h_boxr_l{width:230px;height:30px;margin-left:12px;font-size:12px;}
+			#header .h_box .h_boxr .h_boxr_l a.sina{
+				display:inline-block;
+				width:23px;
+				height:30px;
+				background:url("image/homepage.png") no-repeat -545px -80px;
+				vertical-align:middle;
+				margin-top:5px;
+				margin-left:5px;
+				margin-right:5px;
+			}
+			#header .h_box .h_boxr .h_boxr_l i{
+				background:url("image/homepage.png") no-repeat -567px -80px;
+				display:inline-block;
+				width:22px;
+				height:30px;
+				vertical-align:middle;
+				margin-top:5px;
+				margin-left:5px;
+				margin-right:20px;
+				position:relative;
+			}
+			#header .h_box .h_boxr .h_boxr_l .phone{
+				background:url("image/homepage.png") no-repeat -588px -80px;
+				display:inline-block;
+				width:18px;
+				height:30px;
+				vertical-align:middle;
+				margin-left:10px;
+			}
+			#header .h_box .h_boxr .h_boxr_r{font-size:12px;}
+			img{
+				width:200px;
+				height:200px;
+				position:absolute;
+				z-index:5;
+			}
+			#header .h_box .h_boxr .h_boxr_l i .pic1{top:25px;left:-85px;display:none;}
+			#header .h_box .h_boxr .h_boxr_l .phone .pic3{top:25px;left:610px;display:none;}
+			#header .h_box .h_boxr .h_boxr_l a .pic2{top:25px;left:610px;display:none;}
+			#header .h_box .h_boxr .h_boxr_l a:hover{text-decoration:underline;}
+			#header .h_box .h_boxr .h_boxr_r a:hover{text-decoration:underline;}
+			#header .h_box .h_boxr .h_boxr_l i:hover .pic1{display:block;}
+			#header .h_box .h_boxr .h_boxr_l a:hover .pic2{display:block;}
+			#header .h_box .h_boxr .h_boxr_l .phone:hover .pic3{display:block;}
+			#search{
+				height:800px;
+				background:white;
+			}
+			#search .search_top{
+				width:100%;
+				height:80px;
+			}
+			#search .search_gif{
+				width:270px;
+				height:70px;
+				background:url("image/logo.gif") no-repeat center;
+				padding:5px 0;
+				cursor:pointer;
+				margin-left:-10px;
+			}
+			#search .search_txt{
+				width:470px;
+				margin-top:45px;
+				margin-left:-10px;
+				font-size:0px;
+			}
+			#search .search_txt li{float:left;}
+			#search .search_top .search_txt li a{
+				display:inline-block;
+				width:100px;
+				height:30px;
+				line-height:30px;
+				text-align:center;
+				font-size:14px;
+				border:1px solid #fff;
+
+			}
+			#search .search_top .search_txt li a:hover{
+				border:1px solid #ccc;
+				border-radius:13px;
+			}
+
+			#search .search_txt .search_txt_li{position:relative;z-index:5;}
+			#search .search_txt .search_txt_li ul{
+				background:#fff;
+				position:absolute;
+				width:100px;
+				top:0px;
+				left:0px;
+				border:1px solid #ccc;
+				border-radius:13px;
+				display:none;
+				}
+			#search .search_top .search_txt .search_txt_li ul li{border-bottom:1px solid #ccc;-margin:0;}
+			#search .search_top .search_txt .search_txt_li ul li a{
+				border:none;
+				border-radius:0;
+			}
+			#search .search_top .search_txt .search_txt_li ul .search_text_ul_li
+			{border-bottom:none;}
+
+			#search .search_top .search_txt .search_txt_li:hover ul{display:block;}
+			#search .search_top .search_txt .search_txt_li ul a:hover{color:#ff0000;border-radius:0; border:none;}
+			#search .search_top .search_button{position:relative;}
+			#search .search_top .search_button li{list-style:none;display:inline-block;}
+			#search .search_top .search_button li a{
+				display:inline-block;
+				width:120px;
+				height:35px;
+				line-height:35px;
+				text-align:center;
+				border:1px solid #d74147;
+				font-weight:bold;
+				color:#d74147;
+				margin-top:35px;
+
+			}
+			#search .search_top .search_button .landing{
+				background-color:#d74147;
+				color:#fff;
+				-position:relative;
+			}
+			#search .search_top .search_button a.check{
+				width:45px;
+				height:20px;
+				text-align:center;
+				line-height:20px;
+				color:#fff;
+				font-weight:bold;
+				background:#b73137;
+				border-radius:13px;
+				position:absolute;
+				top:25px;
+				right:120px;
+			}
+			#search .search_top .search_button span{
+				width:90px;
+				height:20px;
+				line-height:20px;
+				text-align:center;
+				color:#fff;
+				font-weight:bold;
+				background:#b73137;
+				border-radius:13px;
+				position:absolute;
+				top:25px;
+				left:210px;
+			}
+			.search_bg{position:relative;height:8px;width:100%;}
+			.search_bg .search_img1{
+				height:8px;
+				width:100%;
+				background:url("image/header_bbg.png") no-repeat center;
+				background-size:100% 100%;
+				position:absolute;
+				top:0px;
+				left:0;
+				z-index:1;
+			}
+			.search_img{margin-top:-8px;height:375px;}
+			.search_img .search_img2{
+				width:100%;
+				height:375px;
+				display:block;
+				position:absolute;
+				background:url("image/banner.png") no-repeat center;
+				background-size:100% 100%;
+				left:0;
+				-z-index:-1;
+			}
+			.search_img .search_list{
+				list-style:none;
+				position:absolute;
+				top:420px;
+				left:50%;
+				margin-left:-100px;
+			}
+			.search_img .search_list li{
+				width:38px;
+				height:6px;
+				float:left;
+				background:#797979;
+				margin:0 5px;
+				border:1px solid #fff;
+			}
+			.search_img .search_list li:hover{
+				border:1px solid #797979;
+				background:none;
+			}
+			.search_ol{line-height:60px;}
+			.search_ol .lef ol{display:inline-block;}
+			.search_ol .lef ol li{
+				width:8px;
+				height:8px;
+				background:#797979;
+				border-radius:50%;
+				display:inline-block;
+				margin:0 5px;
+				line-height:60px;
+			}
+			.search_ol .lef ol li:hover{background:red;}
+			.search_ol .lef span{
+				display:inline-block;
+				margin-left:10px;
+			}
+			.search_ol .lef p{
+				display:inline-block;
+				margin-left:20px;
+			}
+			.search_ol .lef .search_ol_a:hover{text-decoration:underline;}
+			.search_ol .rig a{text-decoration:underline;}
+			.search_ol .rig_text{font-size:28px;}
+			.search_xlzf{
+				width:100%;
+				height:125px;
+				background-color:#d74148;
+				position:relative;
+			}
+			.search_xlzf .search_foot{position:relative;}
+			.search_xlzf .search_foot .xlbg{
+				width:200px;
+				height:35px;
+				background-image:url("image/homepage.png");
+				background-position:242px 68px;
+				position:absolute;
+				top:35px;
+			}
+			.search_xlzf .search_foot span{
+				height:100%;
+				width:200px;
+				font-size:14px;
+				color:#fff;
+				position:absolute;
+				top:68px;
+				left:9px;
+			}
+			.search_xlzf ul{
+				color:#fff;
+
+				list-style:none;
+				position:absolute;
+				top:50%;
+				margin-top:-40px;
+				left:50%;
+				margin-left:-185px;
+			}
+			.search_xlzf ul li{
+				display:inline-block;
+				margin-right:45px;
+			}
+			.search_xlzf ul li p{margin-top:-5px;text-align:center;}
+			.search_xlzf ul li p span{
+				font-size:48px;
+				font-family:"dincond";
+			}
+			.search_xlzf .jiaru{
+				width:240px;
+				line-height:45px;
+				text-align:center;
+				position:absolute;
+				right:185px;
+				top:30px;
+				background-image:url("image/homepage.png");
+				background-position:240px 6px;
+			}
+			.search_xlzf .jiaru a{color:#fff;}
+
+
+
+
+
+			#content{
+				width:100%;
+				height:1200px;
+				background:#ececec;
+				padding-top:30px;
+
+			}
+			#content .con_top{
+				background:#ececec;
+				width:975px;
+				height:34px;
+				color:#999;
+				font-size:14px;
+				padding:0 0 0 15px;
+				-margin:30px 0px;
+				border-bottom:3px solid #e0e0e0;
+			}
+
+			#content .con_top h2{
+				width:90px;
+				background:#ececec;
+				line-height:31px;
+				font-weight:normal;
+				font-size:14px;
+				text-align:center;
+				display:inline-block;
+			}
+			#content .con_top h2.eg{
+
+				height:34px;
+				text-align:center;
+				border-right:3px solid #e0e0e0;
+				border-top:3px solid #e0e0e0;
+				border-left:3px solid #e0e0e0;
+				border-bottom:3px solid #ececec;
+			}
+			#content .con_top .eg2{
+				position:relative;
+			}
+			#content .con_top h2 span{
+				width:34px;
+				height:15px;
+				display:inline-block;
+				position:absolute;
+				background:url("image/label-new.png") no-repeat;
+				top:-5px;
+			}
+			#content .con_mid{margin-top:15px;width:991px;}
+			#content .con_mid li{
+				width:238px;
+				height:530px;
+				background:#fff;
+				margin-right:9px;
+				margin-bottom:15px;
+				display:inline-block;
+				overflow:hidden;
+				position:relative;
+			}
+			#content .con_mid li:nth-child(4){margin-right:0;}
+			#content .con_mid li:nth-child(8){margin-right:0;}
+			#content .con_mid li p{
+				padding:25px 10px 12px 20px;
+
+			}
+			#content .con_mid li p a{
+				font-size:14px;
+				font-weight:bold;
+				color:#666;
+				position:relative;
+			}
+			#content .con_mid li p a i{
+				display:inline-block;
+				width:60px;
+				height:16px;
+				background:url("image/icon_new_customer.png") no-repeat;
+				position:absolute;
+				top:1px;
+				left:103px;
+			}
+			#content .con_mid li p a span{
+				display:inline-block;
+				font-size:12px;
+				color:#999;
+			}
+			#content .con_mid li .con_bg{
+				width:100%;
+				height:8px;
+				display:block;
+				background:url("image/sprites.png") no-repeat;
+				background-position:-212px -163px;
+			}
+			#content .con_mid li .con_img{
+				width:100%;
+				padding:10px 40px;
+			}
+			#content .con_mid li .con_img .pho{
+				width:160px;
+				height:160px;
+				background:url("image/round80.png") no-repeat;
+				position:relative;
+			}
+			#content .con_mid li .con_img .pho img{
+				width:115px;
+				height:115px;
+				border-radius:50%;
+				border:1px solid #fff;
+				position:absolute;
+				top:21px;
+				left:21px;
+			}
+			#content .con_mid li .con_img .con_img_text{
+				display:block;
+				text-indent:35px;
+				width:100%;
+				color:#999;
+			}
+			#content .con_mid li .con_mid_ul{
+				-width:100%;
+				padding:0 10px;
+				font-size:12px;
+				color:#999;
+			}
+			#content .con_mid li .con_mid_ul .xm{
+				border-bottom:1px solid #dddbd6;
+				width:100%;
+				height:50px;
+				line-height:50px;
+				margin-bottom:0;
+			}
+			#content .con_mid li .con_mid_ul .xm .text1{
+				font-size:28px;
+			}
+			#content .con_mid li .con_mid_ul .xm .text2{
+				color:#e33f4a;
+				font-size:28px;
+			}
+			#content .con_mid .botton{
+				width:138px;
+				height:28px;
+				background:#e33f4a;
+				text-align:center;
+				color:#fff;
+				border-radius:4px;
+				display:inline-block;
+				line-height:28px;
+				position:absolute;
+				top:470px;
+				left:70px;
+			}
+			.content_foot{
+				background:#fff;
+				width:1000px;
+				height:175px;
+				padding:25px 0;
+			}
+			.content_foot h5{
+				font-size:14px;
+				color:#444;
+				font-weight:bold;
+				text-indent:8px;
+			}
+			.content_foot h5 a{
+				float:right;
+				font-size:14px;
+				color:#666;
+			}
+			.content_foot ul{
+				width:100%;
+				overflow:hidden;
+				margin-top:10px;
+			}
+			.content_foot ul li{
+				float:left;
+				width:240px;
+				height:93px;
+				margin-left:10px;
+			}
+			.content_foot ul li a{
+				display:block;
+				width:100%;
+				height:100%;
+			}
+			.content_foot ul li a img{
+				width:240px;
+				height:93px;
+			}
+			.foot1{
+				width:100%;
+				height:350px;
+				background:#d74148;
+			}
+			.foot1 .foot1_red .foot_ul{
+				padding-top:60px;
+				padding-left:20px;
+				overflow:hidden;
+			}
+			.foot1 .foot1_red .foot_ul li{
+				float:left;
+				width:24%;
+				text-align:center;
+			}
+			.foot1 .foot1_red .foot_ul li .foot_bg{
+				width:130px;
+				height:130px;
+				background:#b8252c;
+				border-radius:65px;
+				position:relative;
+				margin:auto;
+			}
+			.foot1 .foot1_red .foot_ul li .foot_bg i{
+				width:36px;
+				height:41px;
+				display:block;
+				margin:45px auto 0;
+				position:absolute;
+				left:50%;
+				margin-left:-18px;
+			}
+			.foot1 .foot1_red .foot_ul li .foot_bg .foot1_bg{
+				background:url("image/icon_info_a.png");
+			}
+			.foot1 .foot1_red .foot_ul li .foot_bg .foot2_bg{
+				background:url("image/icon_info_b.png");
+			}
+			.foot1 .foot1_red .foot_ul li .foot_bg .foot3_bg{
+				background:url("image/icon_info_c.png");
+			}
+			.foot1 .foot1_red .foot_ul li .foot_bg .foot4_bg{
+				background:url("image/icon_info_d.png");
+			}
+			.foot1 .foot1_red .foot_ul li p{
+				color:#fff;
+				font-size:20px;
+				text-align:center;
+				margin:20px auto;
+			}
+			.foot1 .foot1_red .foot_ul li span{
+				color:#f49da1;
+				font-size:13px;
+				text-align:center;
+			}
+			#footer{
+				background:#ececec;
+			}
+			#footer .footer_top{
+				height:230px;
+				padding-top:30px;
+			}
+			#footer .footer_top .footer_topt{
+				width:100%;
+				-height:31px;
+				border-bottom:3px solid #e0e0e0;
+				padding-left:10px;
+				overflow:hidden;
+			}
+			#footer .footer_top .footer_topt h2{
+				background-color:#ececec;
+				width:100px;
+				height:31px;
+				line-height:31px;
+				text-align:center;
+				display:inline-block;
+				font-size:14px;
+				font-weight:bold;
+			}
+
+			#footer .footer_top .footer_topt .footer_topt1{
+				background-color:#ececec;
+				height:34px;
+				border-top:3px solid #e0e0e0;
+				border-right:3px solid #e0e0e0;
+				border-left:3px solid #e0e0e0;
+			}
+			#footer .footer_top .footer_top_ul{
+				width:100%;
+				margin-top:15px;
+				padding-left:10px;
+			}
+			#footer .footer_top .footer_top_ul li{
+				border:1px solid #e0e0e0;
+				width:113px;
+				height:48px;
+				display:inline-block;
+				margin-right:6px;
+				margin-top:10px;
+			}
+			#footer .footer_top .footer_top_ul li a{
+				width:100%;
+				height:100%;
+				float:left;
+			}
+			#footer .footer_top .footer_top_ul li .bg1{background:url("image/partner_icon.png") no-repeat 0 0;}
+			#footer .footer_top .footer_top_ul li .bg2{background:url("image/partner_icon.png") no-repeat 0 -50px;}
+			#footer .footer_top .footer_top_ul li .bg3{background:url("image/partner_icon.png") no-repeat 0 -98px;}
+			#footer .footer_top .footer_top_ul li .bg4{background:url("image/partner_icon.png") no-repeat 0 -145px;}
+			#footer .footer_top .footer_top_ul li .bg5{background:url("image/partner_icon.png") no-repeat 0 -193px;}
+			#footer .footer_top .footer_top_ul li .bg6{background:url("image/partner_icon.png") no-repeat 0 -240px;}
+			#footer .footer_top .footer_top_ul li .bg7{background:url("image/partner_icon.png") no-repeat 0 -286px;}
+			#footer .footer_top .footer_top_ul li .bg8{background:url("image/partner_icon.png") no-repeat 0 -335px;}
+			#footer .footer_top .footer_top_ul li .bg9{background:url("image/partner_icon.png") no-repeat 0 -391px;}
+			#footer .footer_top .footer_top_ul li .bg10{background:url("image/partner_icon.png") no-repeat 0 -459px;}
+			.bo{
+				font-size:14px;
+				color:#666;
+				line-height:30px;
+				font-weight:bold;
+			}
+			#footer .footer_mid{
+				width:100%;
+				height:235px;
+				background:#fff;
+			}
+			#footer .footer_mid .footer_list{padding-top:25px;}
+			#footer .footer_mid .footer_list ul{
+				float:left;
+				margin-right:80px;
+			}
+			#footer .footer_mid .footer_list ul li{line-height:30px;}
+			#footer .footer_mid .footer_list ul li a:hover{text-decoration:underline;}
+			#footer .footer_mid .footer_list dl{
+				display:inline-block;
+				margin-right:65px;
+			}
+			#footer .footer_mid .footer_list dl dd img{
+				width:116px;
+				height:116px;
+			}
+			#footer .footer_mid .footer_list .footer_r{
+				float:right;
+			}
+			#footer .footer_mid .footer_list .footer_r p{
+				color:#666;
+				font-size:44px;
+			}
+			#footer .footer_mid .footer_list .footer_r .footer_r_bg{
+				width:80px;
+				height:30px;
+				line-height:30px;
+				border:1px solid #ccc;
+				border-radius:15px;
+				padding-left:50px;
+				margin-top:5px;
+				position:relative;
+			}
+			#footer .footer_mid .footer_list .footer_r .footer_r_bg i{
+				width:18px;
+				height:24px;
+				background-image:url("image/homepage.png");
+				background-position:-759px -54px;
+				position:absolute;
+				top:3px;
+				left:20px;
+			}
+			#footer .footer_bot1{
+				background:#eee;
+				width:100%;
+				height:55px;
+				border-bottom:1px solid #ddd;
+				padding-top:15px;
+			}
+			#footer .footer_bot1 .bot_text .text2{display:inline-block;margin-left:40px;}
+			#footer .footer_bot1 .bot_text p{text-align:center;}
+			#footer .footer_bot2{
+				width:100%;
+				height:100px;
+				background:#eee;
+			}
+			#footer .footer_bot2 .footer_bot2_list{position:relative;}
+			#footer .footer_bot2 .footer_bot2_list li{
+				width:76px;
+				height:29px;
+				display:inline-block;
+				background:url("image/homepage.png") no-repeat;
+				margin-right:14px;
+				margin-top:20px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list1{
+				background-position:-84px -80px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list2{
+				background-position:0px -6px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list3{
+				background-position:-90px -6px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list4{
+				background-position:-180px -6px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list5{
+				background-position:-270px -6px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list6{
+				width:29px;
+				height:29px;
+				background-position:-365px -7px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list7{
+				width:143px;
+				height:43px;
+				background-position:-404px 0px;
+				position:absolute;
+				top:-7px;
+				left:510px;
+			}
+
+
+
+			#footer .footer_bot2 .footer_bot2_list .list1:hover{
+				background-position:-2px -80px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list2:hover{
+				background-position:0px -49px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list3:hover{
+				background-position:-90px -49px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list4:hover{
+				background-position:-180px -49px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list5:hover{
+				background-position:-270px -49px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list6:hover{
+				background-position:-365px -50px;
+			}
+			#footer .footer_bot2 .footer_bot2_list .list7:hover{
+				background-position:-404px -43px;
+			}
+		</style>
+	</head>
+<body>
+<!--头部-->
+	<div  id="header">
+		<div class="h_box main">
+			<div class="h_boxl">
+				<p><a href="">企业代码：<span>851716</span></a></p>
+				<p>客户热线：<span>400-025-6688</span></p>
+			</div>
+			<div class="h_boxr fr">
+				<div class="h_boxr_l fl">
+					关注我们<a href="" class="sina"></a>
+					<i>
+						<img src="image/weixin.jpg" class="pic1"></img>
+					</i>
+					<a href="">
+						手机上有融<img src="image/weixin.jpg" class="pic2"></img>
+					</a>
+					<a href="" class="phone">
+						<img src="image/weixin.jpg" class="pic3"></img>
+					</a>
+				</div>
+				<div class="h_boxr_r fr">
+					您好， 欢迎来到有融网 ! &nbsp| <a href="">帮助中心</a> | <a href="">新手红包</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--搜索-->
+	<div id="search" class="main" style="height:80px;">
+		<div class="search_top">
+			<div class="search_gif fl"></div>
+			<ul class="search_txt li fl clearfloat">
+				<li><a href="">首页</a></li>
+				<li class="search_txt_li"><a href="">理财项目</a>
+					<ul>
+						<li><a href="">理财项目</a></li>
+						<li><a href="">理财专区</a></li>
+						<li class="search_text_ul_li"><a href="">转让专区</a></li>
+					</ul>
+				</li>
+				<li><a href="">安全保障</a></li>
+				<li><a href="">关于有融</a></li>
+			</ul>
+
+			<ul class="search_button fr">
+				<li><a href="" class="landing">登陆</a></li>
+				<li><a href="">注册</a></li>
+				<a href="" class="check">签到</a>
+				<span>送518大礼</span>
+			</ul>
+		</div>
+
+	</div>
+
+
+	<div class="search_bg">
+		<div class="search_img1"></div>
+	</div>
+	<div class="search_img">
+		<a href="" class="search_img2"></a>
+		<ul class="search_list">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="search_ol main clear">
+		<div class="lef fl">
+			<ol>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+			<span><a href="">518全民理财季</a></span>
+			<p>2017-05-12</p>
+			<span class="search_ol_a"><a href="">更多</a></span>
+		</div>
+		<div class="rig fr">
+			<span>累计成功投资：￥</span>
+			<span class='rig_text'>6,169,656,600.00</span>
+			<span>注册人数：</span>
+			<span class='rig_text'>783620</span>
+			<a href="">更多数据</a>
+		</div>
+	</div>
+	<div class="search_xlzf">
+		<div class="search_foot main">
+			<div class="xlbg"></div>
+			<span>资金专人专户，余额乐享收益</span>
+		</div>
+		<ul>
+			<li>
+				<p>
+					<span>0.01</span>元
+				</p>
+				<p>起存金额</p>
+			</li>
+			<li>
+				<p><span>4.05</span>%</p>
+				<p>七日年化收益率</p>
+			</li>
+			<li>
+				<p><span>T+1</span></p>
+				<p>赎回方式</p>
+			</li>
+		</ul>
+		<div class="jiaru">
+			<a href="">立即加入</a>
+		</div>
+	</div>
+	<!--主体-->
+	<div id="content">
+		<div class="con_top main">
+					<h2 class="eg"><a href="">推荐项目</a></h2>
+					<h2><a href="">直投项目</a></h2>
+					<h2><a href="">债权项目</a></h2>
+					<h2 class="eg2">
+						<a href="">转让项目</a>
+						<span></span>
+					</h2>
+		</div>
+		<ul class="con_mid main">
+			<li>
+				<p>
+					<a href="">
+					供应链ZT2936<i></i>
+					<span>服装贸易供应链金融借款项目</span>
+					</a>
+				</p>
+				<span class="con_bg"></span>
+				<div class="con_img">
+					<div class="pho">
+						<img src="photo_img1.jpg"/>
+					</div>
+					<span class="con_img_text">当前进度80%</span>
+				</div>
+				<span class="con_bg"></span>
+				<ul class="con_mid_ul">
+					<li class="xm">
+						项目总额 ￥<span class="text1">500,000.00</span>
+					</li>
+					<li class="xm">
+						年华效益 <span class="text2">10.08%</span>
+					</li>
+					<li class="xm">
+						收益周期 <span class="text1">1</span>个月
+					</li>
+				</ul>
+				<a href="" class="botton">立即投资</a>
+			</li>
+			<li>
+				<p>
+					<a href="">
+					供应链ZT2936<i></i>
+					<span>服装贸易供应链金融借款项目</span>
+					</a>
+				</p>
+				<span class="con_bg"></span>
+				<div class="con_img">
+					<div class="pho">
+						<img src="photo_img1.jpg"/>
+					</div>
+					<span class="con_img_text">当前进度80%</span>
+				</div>
+				<span class="con_bg"></span>
+				<ul class="con_mid_ul">
+					<li class="xm">
+						项目总额 ￥<span class="text1">500,000.00</span>
+					</li>
+					<li class="xm">
+						年华效益 <span class="text2">10.08%</span>
+					</li>
+					<li class="xm">
+						收益周期 <span class="text1">1</span>个月
+					</li>
+				</ul>
+				<a href="" class="botton">立即投资</a>
+			</li>
+			<li>
+				<p>
+					<a href="">
+					供应链ZT2936<i></i>
+					<span>服装贸易供应链金融借款项目</span>
+					</a>
+				</p>
+				<span class="con_bg"></span>
+				<div class="con_img">
+					<div class="pho">
+						<img src="photo_img1.jpg"/>
+					</div>
+					<span class="con_img_text">当前进度80%</span>
+				</div>
+				<span class="con_bg"></span>
+				<ul class="con_mid_ul">
+					<li class="xm">
+						项目总额 ￥<span class="text1">500,000.00</span>
+					</li>
+					<li class="xm">
+						年华效益 <span class="text2">10.08%</span>
+					</li>
+					<li class="xm">
+						收益周期 <span class="text1">1</span>个月
+					</li>
+				</ul>
+				<a href="" class="botton">立即投资</a>
+			</li>
+			<li>
+				<p>
+					<a href="">
+					供应链ZT2936<i></i>
+					<span>服装贸易供应链金融借款项目</span>
+					</a>
+				</p>
+				<span class="con_bg"></span>
+				<div class="con_img">
+					<div class="pho">
+						<img src="photo_img1.jpg"/>
+					</div>
+					<span class="con_img_text">当前进度80%</span>
+				</div>
+				<span class="con_bg"></span>
+				<ul class="con_mid_ul">
+					<li class="xm">
+						项目总额 ￥<span class="text1">500,000.00</span>
+					</li>
+					<li class="xm">
+						年华效益 <span class="text2">10.08%</span>
+					</li>
+					<li class="xm">
+						收益周期 <span class="text1">1</span>个月
+					</li>
+				</ul>
+				<a href="" class="botton">立即投资</a>
+			</li>
+			<li>
+				<p>
+					<a href="">
+					供应链ZT2936<i></i>
+					<span>服装贸易供应链金融借款项目</span>
+					</a>
+				</p>
+				<span class="con_bg"></span>
+				<div class="con_img">
+					<div class="pho">
+						<img src="photo_img1.jpg"/>
+					</div>
+					<span class="con_img_text">当前进度80%</span>
+				</div>
+				<span class="con_bg"></span>
+				<ul class="con_mid_ul">
+					<li class="xm">
+						项目总额 ￥<span class="text1">500,000.00</span>
+					</li>
+					<li class="xm">
+						年华效益 <span class="text2">10.08%</span>
+					</li>
+					<li class="xm">
+						收益周期 <span class="text1">1</span>个月
+					</li>
+				</ul>
+				<a href="" class="botton">立即投资</a>
+			</li>
+			<li>
+				<p>
+					<a href="">
+					供应链ZT2936<i></i>
+					<span>服装贸易供应链金融借款项目</span>
+					</a>
+				</p>
+				<span class="con_bg"></span>
+				<div class="con_img">
+					<div class="pho">
+						<img src="photo_img1.jpg"/>
+					</div>
+					<span class="con_img_text">当前进度80%</span>
+				</div>
+				<span class="con_bg"></span>
+				<ul class="con_mid_ul">
+					<li class="xm">
+						项目总额 ￥<span class="text1">500,000.00</span>
+					</li>
+					<li class="xm">
+						年华效益 <span class="text2">10.08%</span>
+					</li>
+					<li class="xm">
+						收益周期 <span class="text1">1</span>个月
+					</li>
+				</ul>
+				<a href="" class="botton">立即投资</a>
+			</li>
+			<li>
+				<p>
+					<a href="">
+					供应链ZT2936<i></i>
+					<span>服装贸易供应链金融借款项目</span>
+					</a>
+				</p>
+				<span class="con_bg"></span>
+				<div class="con_img">
+					<div class="pho">
+						<img src="photo_img1.jpg"/>
+					</div>
+					<span class="con_img_text">当前进度80%</span>
+				</div>
+				<span class="con_bg"></span>
+				<ul class="con_mid_ul">
+					<li class="xm">
+						项目总额 ￥<span class="text1">500,000.00</span>
+					</li>
+					<li class="xm">
+						年华效益 <span class="text2">10.08%</span>
+					</li>
+					<li class="xm">
+						收益周期 <span class="text1">1</span>个月
+					</li>
+				</ul>
+				<a href="" class="botton">立即投资</a>
+			</li>
+			<li>
+				<p>
+					<a href="">
+					供应链ZT2936<i></i>
+					<span>服装贸易供应链金融借款项目</span>
+					</a>
+				</p>
+				<span class="con_bg"></span>
+				<div class="con_img">
+					<div class="pho">
+						<img src="photo_img1.jpg"/>
+					</div>
+					<span class="con_img_text">当前进度80%</span>
+				</div>
+				<span class="con_bg"></span>
+				<ul class="con_mid_ul">
+					<li class="xm">
+						项目总额 ￥<span class="text1">500,000.00</span>
+					</li>
+					<li class="xm">
+						年华效益 <span class="text2">10.08%</span>
+					</li>
+					<li class="xm">
+						收益周期 <span class="text1">1</span>个月
+					</li>
+				</ul>
+				<a href="" class="botton">立即投资</a>
+			</li>
+		</ul>
+	</div>
+	<div class="content_foot main">
+		<h5>
+			活动专题
+			<a href="">更多</a>
+		</h5>
+		<ul>
+			<li>
+				<a href="">
+					<img src="banner2.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="banner1.jpg"/>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="banner4.jpg"/>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="banner3.png"/>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="foot1">
+		<div class="foot1_red main">
+			<ul class="foot_ul">
+				<li>
+					<div class="foot_bg">
+						<i class="foot1_bg"></i>
+					</div>
+					<p>会员单位</p>
+					<span>中国互联网金融协会首批会员</span>
+				</li>
+				<li>
+					<div class="foot_bg">
+						<i class="foot2_bg"></i>
+					</div>
+					<p>国资背景</p>
+					<span>获国资战略入股</span>
+				</li>
+				<li>
+					<div class="foot_bg">
+						<i class="foot3_bg"></i>
+					</div>
+					<p>资金托管</p>
+					<span>第三方支付 新浪支付存钱罐</span>
+				</li>
+				<li>
+					<div class="foot_bg">
+						<i class="foot4_bg"></i>
+					</div>
+					<p>成功挂牌</p>
+					<span>浙江股权交易中心</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--尾部-->
+	<div id="footer">
+		<div class="footer_top main">
+			<div class="footer_topt">
+				<h2 class="footer_topt1"><a href="" class="sb">合作伙伴</a></h2>
+				<h2><a href="">媒体报道</a></h2>
+			</div>
+			<ul class="footer_top_ul">
+				<li>
+					<a href="" class="bg1"></a>
+				</li>
+				<li>
+					<a href="" class="bg2"></a>
+				</li>
+				<li>
+					<a href="" class="bg3"></a>
+				</li>
+				<li>
+					<a href="" class="bg4"></a>
+				</li>
+				<li>
+					<a href="" class="bg5"></a>
+				</li>
+				<li>
+					<a href="" class="bg6"></a>
+				</li>
+				<li>
+					<a href="" class="bg7"></a>
+				</li>
+				<li style="margin-right:0px;">
+					<a href="" class="bg8"></a>
+				</li>
+				<li>
+					<a href="" class="bg9"></a>
+				</li>
+				<li>
+					<a href="" class="bg10"></a>
+				</li>
+
+			</ul>
+		</div>
+		<div class="footer_mid">
+			<div class="footer_list main">
+				<ul>
+					<li class="bo"><a href="">关于有融</a></li>
+					<li><a href="">合作伙伴</a></li>
+					<li><a href="">联系有融</a></li>
+					<li><a href="">加入我们</a></li>
+					<li><a href="">帮组中心</a></li>
+				</ul>
+				<ul>
+					<li class="bo"><a href="">安全保障</a></li>
+					<li><a href="">项目安全</a></li>
+					<li><a href="">资金安全</a></li>
+					<li><a href="">技术安全</a></li>
+					<li><a href="">法律保障</a></li>
+				</ul>
+				<dl>
+					<dt class="bo">有融网威信公众号</dt>
+					<dd>
+						<img src="weixin.jpg"/>
+					</dd>
+				</dl>
+				<dl>
+					<dt class="bo">有融网APP</dt>
+					<dd>
+						<img src="weixin.jpg"/>
+					</dd>
+				</dl>
+				<div class="footer_r">
+					<span class="bo">全国服务热线</span>
+					<p>400-0256-688</p>
+					<span>工作日: 9:00-20:00节假日: 9:30-18:00 </span>
+					<div class="footer_r_bg">
+						<i></i>
+						<span>在线客服</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bot1">
+			<div class="bot_text  main">
+				<span class="text1">
+					© 2014-2016 YRW.COM 浙江小融网络科技股份有限公司 版权所有 浙ICP备14032974号-3
+					&nbsp&nbsp&nbsp&nbsp ICP经营许可证：浙B2-20150596
+				</span>
+				<span class="text2">
+					"国家信息系统安全等级保护”三级认证
+				</span>
+				<p>理财有风险 投资需谨慎</p>
+			</div>
+		</div>
+		<div class="footer_bot2">
+			<ul class="footer_bot2_list main">
+				<li class="list1"></li>
+				<li class="list2"></li>
+				<li class="list3"></li>
+				<li class="list4"></li>
+				<li class="list5"></li>
+				<li class="list6"></li>
+				<li class="list7"></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+
+

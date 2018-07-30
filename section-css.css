@@ -1,0 +1,186 @@
+
+
+    #dowebok .section-img1 img{
+    animation: run 4s infinite linear;
+    }
+    #dowebok .section-img1 img:nth-child(3){
+      position: absolute;
+      top: 120px;
+      left: 100px;
+    }
+    #dowebok .section-img1 img:nth-child(2){
+      position: absolute;
+      top: 270px;
+      left: 30px;
+    }
+    #dowebok .section-img1 img:nth-child(1){
+      position: absolute;
+      top: 320px;
+      left: 100px;
+    }
+  @keyframes run{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  #dowebok .section-img2 img:nth-child(1){
+    position: absolute;
+    right: -290px;
+    top: 20px;
+    animation: run-translate 1s linear forwards paused;
+  }
+  @keyframes run-translate{
+      from{right: -290px;}to{right: 90px;}
+  }
+  #dowebok .section-img2 img:nth-child(2){
+    -overflow: hidden;
+    position: absolute;
+    left: -190px;
+    bottom: 0px;
+    animation: img-pic 1s linear forwards paused;
+  }
+  @keyframes img-pic{
+    from{
+      left: -190px;
+    }
+    to{
+      left: 140px;
+    }
+  }
+  #dowebok .section-img3 img:nth-child(1){
+    position: absolute;
+    left: 50px;
+    bottom: 30px;
+    animation: img-qiqiu 1s linear forwards paused;
+  }
+  @keyframes img-qiqiu{
+    from{
+      bottom: 30px;
+    }
+    to{
+      bottom: 350px;
+    }
+  }
+
+  #dowebok .section-img3 img:nth-child(2){
+    position: absolute;
+    bottom: 0px;
+    left: 200px;
+  }
+   #dowebok .section-img4 img:nth-child(1){
+    position: absolute;
+    left: 50px;
+  }
+  #dowebok .section-img4 img:nth-child(2){
+    position: absolute;
+    bottom: 308px;
+    left: 37px;
+    transform-origin: right bottom;
+    transform: rotate(0deg);
+    animation: gai 1s linear forwards paused;
+  }
+  @keyframes gai{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(35deg);
+    }
+  }
+
+
+#presentation #dowebok .section-img1 .sec-content-1{
+          position: absolute;
+          width: 400px;
+          top: 220px;
+          right: 50px;
+          font-size: 20px;
+          -opacity: 0;
+          -animation: seccon 1s linear 1s forwards paused;
+       }
+       #presentation #dowebok .section-img1 .hh1{
+        position: absolute;
+        font-size: 38px;
+        top: 70px;
+        right: 100px;
+        -opacity: 0;
+        animation: hhp 1s linear 1s forwards paused;
+       }
+       /* 第二屏 */
+       #presentation #dowebok .section-img2 .sec-content-2{
+          position: absolute;
+          font-size: 20px;
+          width: 400px;
+          top: 315px;
+          right: 50px;
+          opacity: 0;
+          animation: seccon 1.3s linear 1s forwards paused;
+       }
+       @keyframes seccon{
+        from{
+          top: 315px;
+          opacity: 0;
+        }
+        to{
+          top: 250px;
+          opacity: 1;
+        }
+       }
+
+       #presentation #dowebok .section-img2 .hh2{
+        position: absolute;
+        font-size: 38px;
+        top: 70px;
+        right: 100px;
+        opacity: 0;
+        animation: hhp 1s linear 1s forwards paused;
+       }
+       @keyframes hhp{
+        from{
+          top: 70px;
+          opacity: 0;
+        }
+        to{
+          top: 110px;
+          opacity: 1;
+        }
+       }
+       /* 第三瓶 */
+       #presentation #dowebok .section-img3 .hh3{
+        position: absolute;
+        font-size: 38px;
+        top: 70px;
+        right: 100px;
+        opacity: 0;
+        animation: hhp 1s linear 1s forwards paused;
+       }
+       #presentation #dowebok .section-img3 .sec-content-3{
+          position: absolute;
+          font-size: 20px;
+          width: 400px;
+          top: 315px;
+          right: 50px;
+          opacity: 0;
+          animation: seccon 1.3s linear 1s forwards paused;
+       }
+       /* 第四屏 */
+       #presentation #dowebok .section-img4 .hh4{
+        position: absolute;
+        font-size: 38px;
+        top: 70px;
+        right: 100px;
+        opacity: 0;
+        animation: hhp 1s linear 1s forwards paused;
+       }
+       #presentation #dowebok .section-img4 .sec-content-4{
+          position: absolute;
+          font-size: 20px;
+          width: 400px;
+          top: 315px;
+          right: 50px;
+          opacity: 0;
+          animation: seccon 1.3s linear 1s forwards paused;
+       }
